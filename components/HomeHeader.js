@@ -6,7 +6,7 @@ const HomeHeader = ({ onSearch }) => {
   return (
     <View style={{
       backgroundColor: COLORS.primary,
-      padding: SIZES.font
+      paddingHorizontal: SIZES.font,
     }}>
       <View style={{
         flexDirection: 'row',

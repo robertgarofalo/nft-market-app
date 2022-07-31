@@ -3,17 +3,17 @@ import { useIsFocused } from '@react-navigation/core'
 import { View } from 'react-native';
 
 import { COLORS } from '../constants/index';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const FocusedStatusBar = ({backgroundColor}) => {
+const FocusedStatusBar = ({backgroundColor, barStyle, translucent}) => {
   const isFocused = useIsFocused();
 
   return isFocused ? (
-    <View style={{backgroundColor}}>
-      <SafeAreaView>
-        <StatusBar translucent animated={true} barStyle='light-content'/> 
+    // <View >
+      <SafeAreaView style={{backgroundColor, paddingTop: 10}} edges={['left', 'right', 'bottom']}>
+        <StatusBar translucent={translucent} animated={true} barStyle={barStyle}/> 
       </SafeAreaView>
-    </View>
+    // </View>
   )
   :
   null

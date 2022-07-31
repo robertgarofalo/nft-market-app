@@ -10,7 +10,11 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 const Home = () => {
   return (
     <>
-      <FocusedStatusBar backgroundColor={COLORS.primary}/>
+      <FocusedStatusBar 
+      backgroundColor={COLORS.primary} 
+      barStyle='light-content'
+      translucent={true}
+      />
         <View style={{flex: 1}}>
           <View style={{ zIndex: 0 }}>
             <FlatList
