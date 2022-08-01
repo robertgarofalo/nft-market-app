@@ -3,7 +3,7 @@ import { View, Text, Image } from 'react-native'
 import { EthPrice } from './SubInfo'
 import { COLORS, SIZES, FONTS } from '../constants'
 
-const DetailsBid = ({ bid}) => {
+const DetailsBid = ({ bid }) => {
   return (
     <View style={{
       width: '100%',

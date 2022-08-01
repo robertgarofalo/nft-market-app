@@ -11,16 +11,16 @@ const HomeHeader = ({ onSearch }) => {
       <View style={{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
       }}>
         <Image 
           source={assets.logo}
           resizeMode="contain"
-          style={{ width: 90, height: 25}}
+          style={{ width: 190, height: 125}}
         />
         <View style={{ width: 45, height: 45}}>
           <Image 
-            source={assets.person01}
+            source={assets.person03}
             resizeMode='contain'
             style={{ width: '100%', height: '100%'}}
           />
@@ -31,16 +31,18 @@ const HomeHeader = ({ onSearch }) => {
           />
         </View>
       </View>
-      <View style={{ marginVertical: SIZES.font}}>
+      <View style={{ 
+        marginBottom: SIZES.font
+        }}>
         <Text style={{ 
           // fontFamily: FONTS.regular, 
           fontSize: SIZES.small, color: COLORS.white}}>
-          Hello, Victoria 👋
+          Welcome back 👋
         </Text>
         <Text style={{ 
           // fontFamily: FONTS.regular, 
           fontSize: SIZES.large, color: COLORS.white, marginTop: SIZES.base / 2}}>
-          Let's find a masterpiece
+          Discover the latest NFTs
         </Text>
       </View>
 
@@ -61,6 +63,7 @@ const HomeHeader = ({ onSearch }) => {
             />
             <TextInput 
             placeholder='Search NFTs'
+            placeholderTextColor={'white'}
             style={{ flex: 1}}
             onChangeText={onSearch}
             />

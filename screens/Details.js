@@ -53,6 +53,7 @@ const Details = ({ route, navigation }) => {
         minWidth={170}
         fontSize={SIZES.large}
         {...SHADOWS.dark}
+        buttonText='Bid Now'
         />
     </SafeAreaView>
 
@@ -66,7 +67,7 @@ const Details = ({ route, navigation }) => {
       ListHeaderComponent={() => (
         <React.Fragment>
           <DetailsHeader data={data} navigation={navigation}/>
-          <SubInfo />
+          <SubInfo timeEnding={data.timeEnding} item={data}/>
           <View style={{ padding: SIZES.font }}>
             <DetailsDesc data={data} />
             {data.bids.length > 0 && (

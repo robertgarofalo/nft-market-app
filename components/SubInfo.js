@@ -1,5 +1,6 @@
 import { Image, View, Text } from 'react-native'
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from '../constants'
+import { NFTData } from '../constants'
 
 export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize, creator}) => {
     return (
@@ -47,17 +48,29 @@ export const ImageCmp = ({ imgUrl, index }) => {
         />
       )
 }
-export const People = () => {
+export const People = ({ item }) => {
+
+  const people = [assets.person01, assets.person02, assets.person04]
+
     return (
         <View style={{ flexDirection: 'row' }}>
-          {[assets.person02, assets.person03, assets.person04].map((imgUrl, index) => (
+          {/* {[assets.person01, assets.person04, assets.person02].map((imgUrl, index) => (
               <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
-          ))}
+          ))} */}
+          { people.map((imgUrl, index) => {
+            if(index === item.bids.length){
+              return
+            } else {
+              return (
+                <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
+              )
+            }
+          })}
         </View>
       )
 }
 
-export const EndDate = () => {
+export const EndDate = ({ timeEnding }) => {
     return (
         <View 
         style={{
@@ -81,13 +94,13 @@ export const EndDate = () => {
               // fontFamily: FONTS.semiBold, 
               fontSize: SIZES.medium, 
               color: COLORS.primary}}>
-                  12h 30m
+                  {timeEnding}
           </Text>
 
         </View>
       )
 }
-export const SubInfo = () => {
+export const SubInfo = ({ timeEnding, item }) => {
     return (
         <View style={{
             width: '100%',
@@ -96,8 +109,8 @@ export const SubInfo = () => {
             flexDirection: 'row',
             justifyContent: 'space-between'
         }}>
-          <People />
-          <EndDate />
+          <People item={item}/>
+          <EndDate timeEnding={timeEnding}/>
         </View>
       )
 }

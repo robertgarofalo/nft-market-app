@@ -34,7 +34,7 @@ const NFTCard = ({ data }) => {
         <CircleButton imgUrl={assets.heart} right={10} top={10} />
       </View>
 
-      <SubInfo />
+      <SubInfo timeEnding={data.timeEnding} item={data}/>
 
       <View style={{ width: "100%", padding: SIZES.font }}>
         <NFTTitle 
@@ -54,6 +54,7 @@ const NFTCard = ({ data }) => {
           minWidth={120}
           fontSize={SIZES.font}
           handlePress={() => navigation.navigate("Details", { data })}
+          buttonText='Details'
           />
         </View>
       </View>

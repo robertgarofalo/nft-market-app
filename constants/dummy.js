@@ -3,12 +3,13 @@ import assets from "./assets";
 const NFTData = [
   {
     id: "NFT-01",
-    name: "Abstracto #312",
-    creator: "Putri Intan",
+    name: "Moonwalker #2212",
+    creator: "Pina Revia",
     price: 4.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
     image: assets.nft01,
+    timeEnding: '15h 24m',
     bids: [
       {
         id: "BID-11",
@@ -35,17 +36,18 @@ const NFTData = [
   },
   {
     id: "NFT-02",
-    name: "Green Coins",
+    name: "Monkey Mayhem #23",
     creator: "Siti Nurhaliza",
-    price: 7.25,
+    price: 17.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
     image: assets.nft02,
+    timeEnding: '2h 14m',
     bids: [
       {
         id: "BID-21",
-        name: "Jessica Tan",
-        price: 7.05,
+        name: "Abel Wasi",
+        price: 16.35,
         image: assets.person04,
         date: "December 12, 2019 at 12:10 PM",
       },
@@ -53,24 +55,25 @@ const NFTData = [
   },
   {
     id: "NFT-03",
-    name: "NFT coins race",
-    creator: "Elisabeth aho",
-    price: 95.25,
+    name: "Pony Peer",
+    creator: "Elisa Truong",
+    price: 95.21,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
     image: assets.nft03,
+    timeEnding: '4h 55m',
     bids: [
       {
         id: "BID-31",
         name: "Jessica Tan",
-        price: 95.25,
+        price: 85.25,
         image: assets.person02,
         date: "December 12, 2019 at 12:10 PM",
       },
       {
         id: "BID-32",
-        name: "Jennifer Sia",
-        price: 95.50,
+        name: "Chrisine Amer",
+        price: 84.50,
         image: assets.person03,
         date: "December 27, 2019 at 1:50 PM",
       },
@@ -78,12 +81,13 @@ const NFTData = [
   },
   {
     id: "NFT-04",
-    name: "Nifty NFT",
+    name: "Double Jeopardy",
     creator: "Putri Intan",
     price: 54.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur.",
     image: assets.nft04,
+    timeEnding: '19h 04m',
     bids: [
       {
         id: "BID-41",
@@ -117,12 +121,13 @@ const NFTData = [
   },
   {
     id: "NFT-05",
-    name: "Colorful circles",
-    creator: "David doe",
+    name: "Whales to Riches",
+    creator: "Matthew Cann",
     price: 10.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
     image: assets.nft05,
+    timeEnding: '23h 34m',
     bids: [
       {
         id: "BID-51",
@@ -135,12 +140,13 @@ const NFTData = [
   },
   {
     id: "NFT-06",
-    name: "Black box model",
-    creator: "Leo Messi",
-    price: 20.25,
+    name: "Boxed in",
+    creator: "Seda Sadari",
+    price: 19.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
     image: assets.nft06,
+    timeEnding: '3h 55m',
     bids: [
       {
         id: "BID-61",
@@ -181,12 +187,13 @@ const NFTData = [
   },
   {
     id: "NFT-07",
-    name: "Abstracto soulful art",
+    name: "Apex",
     creator: "Victor de la Cruz",
-    price: 18.25,
+    price: 18.45,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis. Ullamcorper platea penatibus ornare egestas nulla ligula hendrerit nisl suscipit sociosqu maximus, tincidunt aptent habitant purus pharetra ultrices dapibus laoreet nisi lacinia. Porta malesuada netus vel sapien conubia porttitor aliquam ut pretium ante litora molestie senectus magna egestas sociosqu, eget aliquet fames pharetra felis posuere varius fringilla quisque in arcu montes eu ullamcorper.",
     image: assets.nft07,
+    timeEnding: '13h 14m',
     bids: [],
   },
 ];
