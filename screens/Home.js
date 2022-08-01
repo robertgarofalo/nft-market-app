@@ -1,13 +1,31 @@
 import { useState } from 'react'
 import { View, SafeAreaView, FlatList, Text } from 'react-native'
 
-import { COLORS, NFTData } from '../constants';
+import { COLORS, NFTData, SIZES } from '../constants';
 
 import { NFTCard, HomeHeader, FocusedStatusBar } from '../components';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 
 const Home = () => {
+
+  const [nftData, setNftData] = useState(NFTData)
+
+  const handleSearch = (value) => {
+    if(!value.length) return setNftData(NFTData)
+
+    const filteredData = NFTData.filter((item) => 
+    item.name.toLowerCase().includes(value.toLowerCase())
+    )
+
+    if(filteredData.length){
+      setNftData(filteredData)
+    } else {
+      setNftData(null)
+    }
+
+  }
+
   return (
     <>
       <FocusedStatusBar 
@@ -18,11 +36,11 @@ const Home = () => {
         <View style={{flex: 1}}>
           <View style={{ zIndex: 0 }}>
             <FlatList
-            data={NFTData}
+            data={nftData}
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
-            ListHeaderComponent={<HomeHeader />}
+            ListHeaderComponent={<HomeHeader onSearch={handleSearch}/>}
             />
           </View>
           <View style={{
@@ -34,8 +52,15 @@ const Home = () => {
             zIndex: -1
           }}>
             <View style={{ height: 300, backgroundColor: COLORS.primary}}/>
-            <View style={{ flex: 1, backgroundColor: COLORS.white}}/>
-
+            <View style={{ flex: 1, backgroundColor: COLORS.white}}>
+            {!nftData && 
+            <Text style={{
+              textAlign: 'center',
+              paddingTop: 30,
+              fontSize: SIZES.large
+            }}>Sorry! No NFTs could be found</Text>}
+            </View>
+            
           </View>
         </View>
     </>

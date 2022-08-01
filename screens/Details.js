@@ -42,13 +42,13 @@ const Details = ({ route, navigation }) => {
       width: '100%',
       position: 'absolute',
       bottom: 0,
-      paddingVertical: SIZES.font,
+      paddingBottom: SIZES.font,
       justifyContent: 'center',
       alignItems: 'center',
-      // backgroundColor: 'rgba(255, 255, 255, 0.5)',
+      backgroundColor: 'rgba(255, 255, 255, 0.5)',
       zIndex: 1,
     }}>
-      <SafeAreaView >
+      <SafeAreaView>
         <RectButton 
         minWidth={170}
         fontSize={SIZES.large}
